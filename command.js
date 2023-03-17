@@ -61,6 +61,12 @@ function refreshBoard(){
     return letter_arr[Math.floor(Math.random() * letter_arr.length)].concat([maj_letter,min_letter]);
 }
 
+window.addEventListener("keydown",function (e) {
+    if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) { 
+        e.preventDefault();
+    }
+})
+
 function main (){
     renderBoard();
 }
