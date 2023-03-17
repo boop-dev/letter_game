@@ -41,6 +41,7 @@ function renderBoard (){
     })
 
     document.getElementById("score").innerText = "SCORE: " + score;
+    document.getElementById("upper").innerText = "Find the letter " + '"' + letter_selection[letter_selection[3]] +'"'
 }
 
 let refresh = document.getElementById("refresh-btn");
