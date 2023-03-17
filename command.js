@@ -1,5 +1,5 @@
 
-let TABLE_SIZE = 25;
+const TABLE_SIZE = Math.round(window.innerWidth * 0.5)/30;// window width divided by approximate width of one button
 const letter_arr = [['6', '9'],['q', 'p'],['W', 'M'],['E', 'F'],['2', 'Z'],['0', 'O'],
                     ['1', 'I'],['S', '5'],['K', 'X'],['g', 'p'],['g', 'q']];
 const board = document.getElementById("board");
@@ -11,7 +11,6 @@ function renderBoard (){
     let letter_selection = refreshBoard();
     let rand_row = Math.abs(Math.ceil((Math.random() * TABLE_SIZE-1)));
     let rand_col = Math.abs(Math.ceil((Math.random() * TABLE_SIZE-1)));
-    console.log(rand_row, rand_col);
     score++;
 
     for(let i = 0; i<TABLE_SIZE; i++){
